@@ -4,7 +4,14 @@ import logo from "../assets/logo.png";
 const Navbar = () => {
   const navLink = (
     <>
-      <NavLink to={"/shop"}>Shop</NavLink>
+      <NavLink
+        to={"/"}
+        className={({ isActive }) =>
+          isActive ? "active text-red-500 font-bold" : ""
+        }
+      >
+        Shop
+      </NavLink>
       <NavLink to={"/mens"}>Men</NavLink>
       <NavLink to={"/womens"}>Women</NavLink>
       <NavLink to={"/kids"}>Kids</NavLink>
