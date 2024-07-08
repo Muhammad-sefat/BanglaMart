@@ -45,9 +45,11 @@ const Navbar = () => {
               {navLink}
             </ul>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center gap-2">
             <img className="w-[20%]" src={logo} alt="" />
-            <a className="btn btn-ghost text-xl">BanglaMart</a>
+            <a className="text-2xl font-semibold">
+              Bangla<span className="text-red-600 font-bold">Mart</span>
+            </a>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">

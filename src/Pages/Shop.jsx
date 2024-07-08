@@ -1,4 +1,5 @@
 import Hero from "./Hero";
+import Offers from "./Offers";
 import Popular from "./Popular";
 
 const Shop = () => {
@@ -6,6 +7,7 @@ const Shop = () => {
     <div>
       <Hero />
       <Popular />
+      <Offers />
     </div>
   );
 };
