@@ -1,5 +1,6 @@
 import Hero from "./Hero";
 import NewCollections from "./NewCollections";
+import NewsNetter from "./NewsNetter";
 import Offers from "./Offers";
 import Popular from "./Popular";
 
@@ -10,6 +11,7 @@ const Shop = () => {
       <Popular />
       <Offers />
       <NewCollections />
+      <NewsNetter />
     </div>
   );
 };
