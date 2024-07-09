@@ -12,14 +12,35 @@ const Navbar = () => {
       >
         Shop
       </NavLink>
-      <NavLink to={"/mens"}>Men</NavLink>
-      <NavLink to={"/womens"}>Women</NavLink>
-      <NavLink to={"/kids"}>Kids</NavLink>
+      <NavLink
+        to={"/mens"}
+        className={({ isActive }) =>
+          isActive ? "active text-red-500 font-bold" : ""
+        }
+      >
+        Men
+      </NavLink>
+      <NavLink
+        to={"/womens"}
+        className={({ isActive }) =>
+          isActive ? "active text-red-500 font-bold" : ""
+        }
+      >
+        Women
+      </NavLink>
+      <NavLink
+        to={"/kids"}
+        className={({ isActive }) =>
+          isActive ? "active text-red-500 font-bold" : ""
+        }
+      >
+        Kids
+      </NavLink>
     </>
   );
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-gradient-to-b from-pink-200 to-gray-200 rounded">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
