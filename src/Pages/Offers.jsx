@@ -1,8 +1,8 @@
 import image from "../assets/exclusive_image.png";
 const Offers = () => {
   return (
-    <div className="my-8">
-      <div className="hero bg-gradient-to-b from-purple-200 to-gray-200 rounded h-[80vh]">
+    <div className="py-10">
+      <div className="hero bg-gradient-to-b from-purple-200 to-gray-100 rounded h-[80vh]  w-[90%] mx-auto">
         <div className="hero-content flex-col lg:flex-row-reverse gap-10">
           <img src={image} className="md:w-[35%]" />
           <div className="md:w-[55%] text-left">

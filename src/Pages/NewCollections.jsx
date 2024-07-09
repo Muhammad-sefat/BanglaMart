@@ -1,15 +1,15 @@
-import data_product from "../assets/data.js";
-import SingleItem from "./SingleItem.jsx";
+import SingleItem from "./SingleItem";
+import new_collection from "../assets/new_collections";
 
-const Popular = () => {
+const NewCollections = () => {
   return (
     <div className="my-10">
       <h2 className="text-6xl font-semibold my-5 text-center">
-        POPULAR IN WOMEN
+        NEW COLLECTIONS
       </h2>
       <hr className="w-[300px] h-2 bg-black rounded mx-auto" />
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 my-5">
-        {data_product.map((item, id) => {
+        {new_collection.map((item, id) => {
           return (
             <SingleItem
               key={id}
@@ -25,4 +25,4 @@ const Popular = () => {
   );
 };
 
-export default Popular;
+export default NewCollections;

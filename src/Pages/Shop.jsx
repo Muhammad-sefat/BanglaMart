@@ -1,4 +1,5 @@
 import Hero from "./Hero";
+import NewCollections from "./NewCollections";
 import Offers from "./Offers";
 import Popular from "./Popular";
 
@@ -8,6 +9,7 @@ const Shop = () => {
       <Hero />
       <Popular />
       <Offers />
+      <NewCollections />
     </div>
   );
 };
