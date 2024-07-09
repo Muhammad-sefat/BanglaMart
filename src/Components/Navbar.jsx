@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
@@ -80,7 +80,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end gap-3">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-            <div className="indicator">
+            <Link to={"/cart"} className="indicator">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -96,9 +96,11 @@ const Navbar = () => {
                 />
               </svg>
               <span className="badge badge-sm indicator-item">0</span>
-            </div>
+            </Link>
           </div>
-          <a className="btn">Login</a>
+          <Link to={"/register"} className="btn">
+            Login
+          </Link>
         </div>
       </div>
     </div>

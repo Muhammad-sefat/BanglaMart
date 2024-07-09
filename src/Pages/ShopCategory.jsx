@@ -30,7 +30,7 @@ const ShopCategory = (props) => {
         })}
       </div>
       <button className="btn text-base font-medium bg-red-500 text-white my-5">
-        Load More
+        Explore More
       </button>
     </div>
   );
