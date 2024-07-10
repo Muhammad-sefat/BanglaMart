@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 const SingleItem = (props) => {
   return (
-    <div>
+    <Link to={`/product/${props.id}`}>
       <div className="card bg-base-100 shadow-xl transition hover:scale-110 duration-150">
         <figure>
           <img src={props.image} />
@@ -13,7 +15,7 @@ const SingleItem = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
