@@ -2,7 +2,7 @@ import star_icon from "../assets/star_icon.png";
 import star_dull_icon from "../assets/star_dull_icon.png";
 const SingleProduct = ({ product }) => {
   return (
-    <div className="flex gap-5">
+    <div className="flex gap-5 mt-8">
       <div className="flex gap-5 md:w-[50%]">
         <div>
           <img
@@ -31,7 +31,7 @@ const SingleProduct = ({ product }) => {
         </div>
       </div>
       <div className="md:w-[50%]">
-        <h1>{product.name}</h1>
+        <h1 className="text-left text-2xl font-medium mb-4">{product.name}</h1>
 
         <div className="flex gap-2 items-center">
           <div className="flex">
@@ -51,7 +51,7 @@ const SingleProduct = ({ product }) => {
             {product.new_price}
           </p>
         </div>
-        <p className="font-medium my-5">
+        <p className="font-medium my-5 text-left">
           Originally designed for pilots, bomber jackets are known for their
           fitted waist and cuffs, and a comfortable, casual style. They often
           have a zippered front and can be made from materials like leather,
@@ -65,14 +65,16 @@ const SingleProduct = ({ product }) => {
           <p className="py-1 px-3 rounded bg-gray-200 font-medium">XL</p>
           <p className="py-1 px-3 rounded bg-gray-200 font-medium">XXL</p>
         </div>
-        <button className="btn bg-red-500 rounded my-5 text-white">
-          Add To Cart
-        </button>
-        <p>
+        <div className="text-left">
+          <button className="btn bg-red-500 rounded my-5 text-white font-medium">
+            Add To Cart
+          </button>
+        </div>
+        <p className="text-left">
           <span className="font-medium">Category :</span> Women , T-Shirt , Crop
           Top
         </p>
-        <p>
+        <p className="text-left">
           <span className="font-medium">Tags :</span> Latest , Modren
         </p>
       </div>
