@@ -7,31 +7,31 @@ const SingleProduct = ({ product }) => {
         <div>
           <img
             className="w-[100px] h-[110px] rounded"
-            src={product.image}
+            src={product?.image}
             alt=""
           />
           <img
             className="w-[100px] h-[110px] rounded mt-3"
-            src={product.image}
+            src={product?.image}
             alt=""
           />
           <img
             className="w-[100px] h-[110px] rounded mt-3"
-            src={product.image}
+            src={product?.image}
             alt=""
           />
           <img
             className="w-[100px] h-[110px] rounded mt-3 mb-5"
-            src={product.image}
+            src={product?.image}
             alt=""
           />
         </div>
         <div>
-          <img className="w-full h-[96%] rounded" src={product.image} alt="" />
+          <img className="w-full h-[96%] rounded" src={product?.image} alt="" />
         </div>
       </div>
       <div className="md:w-[50%]">
-        <h1 className="text-left text-2xl font-medium mb-4">{product.name}</h1>
+        <h1 className="text-left text-2xl font-medium mb-4">{product?.name}</h1>
 
         <div className="flex gap-2 items-center">
           <div className="flex">
@@ -45,10 +45,10 @@ const SingleProduct = ({ product }) => {
         </div>
         <div className="flex gap-6 my-5">
           <p className="text-xl font-medium line-through text-gray-400">
-            {product.old_price}
+            {product?.old_price}
           </p>
           <p className="text-xl font-medium text-red-500">
-            {product.new_price}
+            {product?.new_price}
           </p>
         </div>
         <p className="font-medium my-5 text-left">

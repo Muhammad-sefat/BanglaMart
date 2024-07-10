@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
 
 const SingleItem = (props) => {
+  if (!props) {
+    return null;
+  }
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
   return (
-    <Link to={`/product/${props.id}`}>
+    <Link to={`/product/${props.id}`} onClick={handleClick}>
       <div className="card bg-base-100 shadow-xl transition hover:scale-110 duration-150">
         <figure>
           <img src={props.image} />
