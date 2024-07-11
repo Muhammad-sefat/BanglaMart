@@ -3,7 +3,8 @@ import { shopContext } from "../Context/ShopContext";
 import remove_icon from "../assets/cart_cross_icon.png";
 
 const CartItems = () => {
-  const { all_product, cartItems, CartFromRemove } = useContext(shopContext);
+  const { all_product, cartItems, CartFromRemove, getTotalCartItem } =
+    useContext(shopContext);
   return (
     <div className="my-8">
       <div className="overflow-x-auto">
@@ -65,12 +66,12 @@ const CartItems = () => {
           </tbody>
         </table>
       </div>
-      <div className="flex gap-16 my-16">
+      <div className="md:flex gap-16 my-16">
         <div className="md:w-[50%] text-left">
           <h1 className="text-2xl font-semibold">Cart Total</h1>
           <div className="flex items-center justify-between my-4 text-base font-medium">
             <p>Subtotal</p>
-            <p>$0</p>
+            <p>${getTotalCartItem()}</p>
           </div>
           <hr />
           <div className="flex items-center justify-between my-4 text-base font-medium">
@@ -80,8 +81,12 @@ const CartItems = () => {
           <hr />
           <div className="flex items-center justify-between my-2 text-xl font-medium">
             <p>Total</p>
-            <p>$0</p>
+            <p>${getTotalCartItem()}</p>
           </div>
+          <button className="btn bg-red-500 text-white my-5">
+            {" "}
+            PROCEED TO CHECKOUT
+          </button>
         </div>
         <div className="md:w-[50%]">
           <form>

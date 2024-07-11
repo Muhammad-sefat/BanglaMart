@@ -5,35 +5,39 @@ import { shopContext } from "../Context/ShopContext";
 const SingleProduct = ({ product }) => {
   const { addToCart } = useContext(shopContext);
   return (
-    <div className="flex gap-5 mt-8">
-      <div className="flex gap-5 md:w-[50%]">
+    <div className="p-3 lg:flex gap-5 mt-8">
+      <div className="flex  gap-5 lg:w-[50%] p-5">
         <div>
           <img
-            className="w-[100px] h-[110px] rounded"
+            className="w-[100px] h-[110px] rounded hover:scale-105"
             src={product?.image}
             alt=""
           />
           <img
-            className="w-[100px] h-[110px] rounded mt-3"
+            className="w-[100px] h-[110px] rounded mt-3 hover:scale-105"
             src={product?.image}
             alt=""
           />
           <img
-            className="w-[100px] h-[110px] rounded mt-3"
+            className="w-[100px] h-[110px] rounded mt-3 hover:scale-105"
             src={product?.image}
             alt=""
           />
           <img
-            className="w-[100px] h-[110px] rounded mt-3 mb-5"
+            className="w-[100px] h-[110px] rounded mt-3 mb-5 hover:scale-105"
             src={product?.image}
             alt=""
           />
         </div>
         <div>
-          <img className="w-full h-[96%] rounded" src={product?.image} alt="" />
+          <img
+            className="w-full h-[96%] rounded hover:scale-110"
+            src={product?.image}
+            alt=""
+          />
         </div>
       </div>
-      <div className="md:w-[50%]">
+      <div className="p-5 lg:w-[50%]">
         <h1 className="text-left text-2xl font-medium mb-4">{product?.name}</h1>
 
         <div className="flex gap-2 items-center">

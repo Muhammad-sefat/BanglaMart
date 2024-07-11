@@ -9,8 +9,8 @@ const Hero = () => {
     <div>
       <div className="hero bg-gradient-to-r from-purple-200 to-pink-200 rounded min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <img src={hero_icon} className="md:w-[40%]" />
-          <div className="md:w-[50%] text-left">
+          <img src={hero_icon} className="lg:w-[40%]" />
+          <div className="lg:w-[50%] text-left">
             <h1 className="text-xl font-bold">New Arrivals Here!</h1>
             <div className="text-5xl font-bold my-5 space-y-3">
               <div className="flex items-center gap-2">

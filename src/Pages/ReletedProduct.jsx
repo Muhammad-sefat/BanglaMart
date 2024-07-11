@@ -3,7 +3,7 @@ import SingleItem from "./SingleItem";
 const ReletedProduct = () => {
   return (
     <div className="my-8">
-      <h2 className="text-6xl font-semibold my-5 text-center">
+      <h2 className="text-4xl md:text-6xl font-semibold my-5 text-center">
         Releted Product
       </h2>
       <hr className="w-[300px] h-2 bg-black rounded mx-auto" />

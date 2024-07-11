@@ -1,7 +1,7 @@
 const NewsNetter = () => {
   return (
     <div className="my-8">
-      <div className="flex items-center justify-center bg-gradient-to-b from-purple-200 to-gray-100 rounded h-[60vh]  w-[90%] mx-auto">
+      <div className="p-3 flex items-center justify-center bg-gradient-to-b from-purple-200 to-gray-100 rounded md:h-[60vh]  md:w-[90%] mx-auto">
         <div>
           <h2 className="text-2xl md:text-5xl font-medium">
             Get Exclusive Offers on Your Email!
