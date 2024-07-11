@@ -1,7 +1,9 @@
+import CartItems from "./CartItems";
+
 const Cart = () => {
   return (
     <div>
-      <h1>This is cart section</h1>
+      <CartItems />
     </div>
   );
 };

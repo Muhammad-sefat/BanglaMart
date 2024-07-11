@@ -6,9 +6,11 @@ import router from "./Router";
 import ShopContextProvider from "./Context/ShopContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <ShopContextProvider>
-      <RouterProvider router={router} />
-    </ShopContextProvider>
-  </React.StrictMode>
+  <div className="p-5 md:px-6 mx-auto">
+    <React.StrictMode>
+      <ShopContextProvider>
+        <RouterProvider router={router} />
+      </ShopContextProvider>
+    </React.StrictMode>
+  </div>
 );

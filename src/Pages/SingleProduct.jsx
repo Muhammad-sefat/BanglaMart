@@ -1,6 +1,9 @@
 import star_icon from "../assets/star_icon.png";
 import star_dull_icon from "../assets/star_dull_icon.png";
+import { useContext } from "react";
+import { shopContext } from "../Context/ShopContext";
 const SingleProduct = ({ product }) => {
+  const { addToCart } = useContext(shopContext);
   return (
     <div className="flex gap-5 mt-8">
       <div className="flex gap-5 md:w-[50%]">
@@ -66,7 +69,12 @@ const SingleProduct = ({ product }) => {
           <p className="py-1 px-3 rounded bg-gray-200 font-medium">XXL</p>
         </div>
         <div className="text-left">
-          <button className="btn bg-red-500 rounded my-5 text-white font-medium">
+          <button
+            onClick={() => {
+              addToCart(product.id);
+            }}
+            className="btn bg-red-500 rounded my-5 text-white font-medium"
+          >
             Add To Cart
           </button>
         </div>

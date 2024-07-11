@@ -12,6 +12,7 @@ const ReletedProduct = () => {
           return (
             <SingleItem
               key={id}
+              id={item.id}
               name={item.name}
               image={item.image}
               new_price={item.new_price}
