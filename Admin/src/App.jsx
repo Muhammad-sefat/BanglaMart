@@ -1,10 +1,13 @@
 import "./App.css";
+import Admin from "./Components/Admin";
+import Navbar from "./Components/Navbar";
 
 function App() {
   return (
-    <>
-      <p className="text-red-800">Hello Everyone i am admin</p>
-    </>
+    <div>
+      <Navbar />
+      <Admin />
+    </div>
   );
 }
 
