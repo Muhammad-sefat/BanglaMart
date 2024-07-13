@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import remove_icon from "../assets/cross_icon.png";
+import Swal from "sweetalert2";
 
 const ListProduct = () => {
   const [listProduct, setListProduct] = useState([]);
@@ -15,6 +16,37 @@ const ListProduct = () => {
   useEffect(() => {
     getData();
   }, []);
+
+  const removeProduct = async (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        await fetch("http://localhost:5000/removeproduct", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ id: id }),
+        });
+
+        await getData();
+
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your product has been deleted.",
+          icon: "success",
+        });
+      }
+    });
+  };
 
   return (
     <div>
@@ -53,6 +85,9 @@ const ListProduct = () => {
                   <td className="text-center">{item.category}</td>
                   <td>
                     <img
+                      onClick={() => {
+                        removeProduct(item.id);
+                      }}
                       className="mx-auto rounded"
                       src={remove_icon}
                       alt="Remove"
