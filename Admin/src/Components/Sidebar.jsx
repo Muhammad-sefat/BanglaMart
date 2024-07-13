@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div className="w-full md:max-w-64 bg-gray-100 pt-12 px-2 h-[100vh] space-y-5">
+    <div className="bg-gray-100 pt-12 px-2 h-[100vh] space-y-5">
       <Link
         to={"/addproduct"}
         className="flex items-center justify-around rounded bg-white"

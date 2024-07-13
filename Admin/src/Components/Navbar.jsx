@@ -3,7 +3,7 @@ import navprofile from "../assets/nav-profile.svg";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between px-4 py-2 bg-gray-100 rounded ">
+    <div className="flex justify-between px-4 py-2 bg-gray-100 rounded border-b-2 border-b-black">
       <div className="flex items-center gap-2">
         <img className="w-[25%]" src={navlogo} alt="" />
         <div>

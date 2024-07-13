@@ -3,7 +3,7 @@ import Sidebar from "./Sidebar";
 
 const Admin = () => {
   return (
-    <div>
+    <div className="w-2/12">
       <Sidebar />
     </div>
   );
