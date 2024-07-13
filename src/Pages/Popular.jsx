@@ -4,7 +4,7 @@ import SingleItem from "./SingleItem.jsx";
 const Popular = () => {
   return (
     <div className="my-10">
-      <h2 className="text-6xl font-semibold my-5 text-center">
+      <h2 className="text-3xl md:text-6xl font-semibold my-5 text-center">
         POPULAR IN WOMEN
       </h2>
       <hr className="w-[300px] h-2 bg-black rounded mx-auto" />
