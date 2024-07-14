@@ -1,7 +1,14 @@
 import SingleItem from "./SingleItem";
-import new_collection from "../assets/new_collections";
+import { useEffect, useState } from "react";
 
 const NewCollections = () => {
+  const [new_collection, setNew_collection] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/newcollection")
+      .then((res) => res.json())
+      .then((data) => setNew_collection(data));
+  }, []);
   return (
     <div className="my-10">
       <h2 className="p-3 text-3xl md:text-6xl font-semibold my-5 text-center">
