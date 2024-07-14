@@ -53,8 +53,8 @@ const ListProduct = () => {
       <p className="text-5xl font-medium text-center">All Product Here</p>
       <div className="overflow-x-auto">
         <table className="table w-full my-10">
-          <thead className="text-base font-medium mb-6">
-            <tr className="border-b border-gray-200 my-6">
+          <thead className="text-base font-medium">
+            <tr className="border-b border-gray-200 mb-6">
               <th>Product</th>
               <th>Title</th>
               <th>Old_Price</th>
@@ -66,12 +66,13 @@ const ListProduct = () => {
           <tbody className="pt-6">
             {listProduct.map((item, id) => {
               return (
-                <tr key={id} className="border-b border-gray-200 pt-3">
+                <tr key={id} className="border-b border-gray-200">
                   <td>
                     <div className="flex items-center gap-3">
                       <div className="avatar">
                         <div className="mask mask-squircle h-12 w-12">
                           <img
+                            className="rounded"
                             src={item.image}
                             alt="Avatar Tailwind CSS Component"
                           />
@@ -88,7 +89,7 @@ const ListProduct = () => {
                       onClick={() => {
                         removeProduct(item.id);
                       }}
-                      className="mx-auto rounded"
+                      className="mx-auto bg-gray-400 p-1 rounded-xl"
                       src={remove_icon}
                       alt="Remove"
                     />

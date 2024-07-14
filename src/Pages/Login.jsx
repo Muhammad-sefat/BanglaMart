@@ -1,18 +1,48 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+  const handlerChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  const login = async (e) => {
+    e.preventDefault();
+    console.log("Login successfully", formData);
+    let responseData;
+    await fetch("http://localhost:5000/login", {
+      method: "POST",
+      headers: {
+        Accept: "application/form-data",
+        "Content-Type": "Application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((res) => res.json())
+      .then((data) => (responseData = data));
+
+    if (responseData.success) {
+      localStorage.setItem("auth-token", responseData.token);
+      window.location.replace("/");
+    }
+  };
   return (
     <div>
       <div className="w-full max-w-md mx-auto p-8 space-y-3 my-8 rounded-xl bg-gradient-to-b from-purple-200 to-gray-100 dark:bg-gray-50 dark:text-gray-800">
         <h1 className="text-2xl font-bold text-center">Sign In</h1>
-        <form noValidate="" action="" className="space-y-6 text-left">
+        <form onSubmit={login} className="space-y-6 text-left">
           <div className="space-y-1 text-sm">
-            <label htmlFor="username" className="block dark:text-gray-600">
-              Your Name
+            <label htmlFor="email" className="block dark:text-gray-600">
+              Your Email
             </label>
             <input
               type="text"
-              name="username"
+              name="email"
+              value={formData.email}
+              onChange={handlerChange}
               id="username"
               placeholder="Your Name"
               className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
@@ -25,6 +55,8 @@ const Login = () => {
             <input
               type="password"
               name="password"
+              value={formData.password}
+              onChange={handlerChange}
               id="password"
               placeholder="Password"
               className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
@@ -35,7 +67,10 @@ const Login = () => {
               </a>
             </div>
           </div>
-          <button className="block w-full p-3 text-center bg-red-500 rounded text-white font-medium dark:text-gray-50 dark:bg-violet-600">
+          <button
+            type="submit"
+            className="block w-full p-3 text-center bg-red-500 rounded text-white font-medium dark:text-gray-50 dark:bg-violet-600"
+          >
             Sign in
           </button>
         </form>
