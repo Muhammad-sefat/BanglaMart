@@ -9,9 +9,9 @@ const SingleItem = (props) => {
   };
   return (
     <Link to={`/product/${props.id}`} onClick={handleClick}>
-      <div className="card bg-base-100 shadow-xl transition hover:scale-110 duration-150">
+      <div className="card h-full bg-base-100 shadow-xl transition hover:scale-110 duration-150">
         <figure>
-          <img src={props.image} />
+          <img className="h-full" src={props.image} />
         </figure>
         <div className="text-left">
           <h2 className="text-lg font-semibold mt-3">{props.name}</h2>
