@@ -103,9 +103,21 @@ const Navbar = () => {
               </span>
             </Link>
           </div>
-          <Link to={"/register"} className="btn">
-            Login
-          </Link>
+          {localStorage.getItem("auth-token") ? (
+            <button
+              className="btn"
+              onClick={() => {
+                localStorage.removeItem("auth-token");
+                window.location.replace("/");
+              }}
+            >
+              Logout
+            </button>
+          ) : (
+            <Link to={"/login"} className="btn">
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </div>
